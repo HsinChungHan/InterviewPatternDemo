@@ -15,6 +15,9 @@
 		D18F92CF25B746FC00C1A63B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D18F92CD25B746FC00C1A63B /* LaunchScreen.storyboard */; };
 		D18F92DA25B746FC00C1A63B /* CoordinatorPatternAndDepedencyInjectionDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F92D925B746FC00C1A63B /* CoordinatorPatternAndDepedencyInjectionDemoTests.swift */; };
 		D18F92E525B746FC00C1A63B /* CoordinatorPatternAndDepedencyInjectionDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F92E425B746FC00C1A63B /* CoordinatorPatternAndDepedencyInjectionDemoUITests.swift */; };
+		D18F92FB25B7491700C1A63B /* SocialLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F92FA25B7491700C1A63B /* SocialLoginManager.swift */; };
+		D18F930025B749F600C1A63B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F92FF25B749F600C1A63B /* LoginViewController.swift */; };
+		D18F930825B752AD00C1A63B /* MembershipLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F930725B752AD00C1A63B /* MembershipLoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		D18F92E025B746FC00C1A63B /* CoordinatorPatternAndDepedencyInjectionDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoordinatorPatternAndDepedencyInjectionDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D18F92E425B746FC00C1A63B /* CoordinatorPatternAndDepedencyInjectionDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorPatternAndDepedencyInjectionDemoUITests.swift; sourceTree = "<group>"; };
 		D18F92E625B746FC00C1A63B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D18F92FA25B7491700C1A63B /* SocialLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginManager.swift; sourceTree = "<group>"; };
+		D18F92FF25B749F600C1A63B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D18F930725B752AD00C1A63B /* MembershipLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipLoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +108,9 @@
 				D18F92C225B746F900C1A63B /* AppDelegate.swift */,
 				D18F92C425B746F900C1A63B /* SceneDelegate.swift */,
 				D18F92C625B746F900C1A63B /* ViewController.swift */,
+				D18F92FA25B7491700C1A63B /* SocialLoginManager.swift */,
+				D18F930725B752AD00C1A63B /* MembershipLoginManager.swift */,
+				D18F92FF25B749F600C1A63B /* LoginViewController.swift */,
 				D18F92C825B746F900C1A63B /* Main.storyboard */,
 				D18F92CB25B746FC00C1A63B /* Assets.xcassets */,
 				D18F92CD25B746FC00C1A63B /* LaunchScreen.storyboard */,
@@ -258,8 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18F930025B749F600C1A63B /* LoginViewController.swift in Sources */,
+				D18F92FB25B7491700C1A63B /* SocialLoginManager.swift in Sources */,
 				D18F92C725B746F900C1A63B /* ViewController.swift in Sources */,
 				D18F92C325B746F900C1A63B /* AppDelegate.swift in Sources */,
+				D18F930825B752AD00C1A63B /* MembershipLoginManager.swift in Sources */,
 				D18F92C525B746F900C1A63B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
