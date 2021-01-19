@@ -14,7 +14,7 @@ enum LoginType {
     case EmailLogin
 }
 
-// -MARK: Depenancy Injection Demo
+// MARK: - Depenancy Injection Demo
 protocol LoginViewControllerDataSource: NSObject {
     func loginViewControllerGetUserInformation(_ loginViewController: LoginViewController, handle: (String) -> Void)
 }
@@ -23,12 +23,19 @@ protocol LoginViewControllerDelegate: NSObject {
     func loginViewControllerDoLogIn(_ loginViewController: LoginViewController, loginType: LoginType)
 }
 
+//MARK: - Coordinator Pattern
+protocol LoginViewControllerFlowDelegate: NSObject {
+    func loginViewControllerFlowDelegateGoToProductVC(_ loginViewController: LoginViewController, loginType: LoginType)
+}
+
 class LoginViewController: UIViewController {
     weak var socialLoginDataSource: LoginViewControllerDataSource?
     weak var socialLoginDelegate: LoginViewControllerDelegate?
     
     weak var membershipLoginDataSource: LoginViewControllerDataSource?
     weak var membershipLoginDelegate: LoginViewControllerDelegate?
+    
+    weak var flowDelegate: LoginViewControllerFlowDelegate?
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nil, bundle: nil)
@@ -59,5 +66,15 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        let label = VCIdLabel()
+        label.setLabel(name: "LoginVC", frame: CGRect(x: 200, y: 200, width: 100, height: 20))
+        view.addSubview(label)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        // flow to product page
+        flowDelegate?.loginViewControllerFlowDelegateGoToProductVC(self, loginType: .EmailLogin)
     }
 }
