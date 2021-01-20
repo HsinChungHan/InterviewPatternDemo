@@ -48,11 +48,10 @@ extension FlowViewController: InputUserAddressViewControllerFlowDelegate {
 
 extension FlowViewController: LoginViewControllerFlowDelegate {
     func loginViewControllerFlowDelegateGoToProductVC(_ loginViewController: LoginViewController, loginType: LoginType) {
-        let productVC = ProductViewController()
-        user.loginType = loginType
         let viewModel = ProductVCViewModel()
-        productVC.viewModel = viewModel
-        viewModel.user = user
+        let productVC = ProductViewController(viewModel: viewModel)
+        user.loginType = loginType
+        viewModel.setUser(user: user)
         loginViewController.present(productVC, animated: true)
         productVC.flowDelegate = self
     }

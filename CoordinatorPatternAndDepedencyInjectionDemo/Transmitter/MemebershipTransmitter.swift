@@ -11,9 +11,9 @@ class MembershipTransmitter {
     
     required init() {}
     
-    func confirm(loginType: LoginType, failure: ((LoginType) -> ())) {
+    func confirm(loginType: LoginType, success:((LoginType) -> Void), failure: ((LoginType) -> Void)) {
         if nextTransmitter != nil {
-            nextTransmitter?.confirm(loginType: loginType, failure: failure)
+            nextTransmitter?.confirm(loginType: loginType, success: success, failure: failure)
         }else {
             print("Reach to tail of responder chain，no one can handle \(loginType.rawValue) event!")
             failure(loginType)

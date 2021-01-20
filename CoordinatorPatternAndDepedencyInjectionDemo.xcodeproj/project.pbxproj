@@ -31,6 +31,7 @@
 		D18F937725B80B5800C1A63B /* EmailMemberShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F937625B80B5800C1A63B /* EmailMemberShip.swift */; };
 		D18F937C25B80CAD00C1A63B /* MemebershipTransmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */; };
 		D18F938125B80F8B00C1A63B /* ProductVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F938025B80F8B00C1A63B /* ProductVCViewModel.swift */; };
+		D18F938E25B8501300C1A63B /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F938D25B8501300C1A63B /* Bindable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		D18F937625B80B5800C1A63B /* EmailMemberShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailMemberShip.swift; sourceTree = "<group>"; };
 		D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemebershipTransmitter.swift; sourceTree = "<group>"; };
 		D18F938025B80F8B00C1A63B /* ProductVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVCViewModel.swift; sourceTree = "<group>"; };
+		D18F938D25B8501300C1A63B /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,10 +136,9 @@
 				D18F92C225B746F900C1A63B /* AppDelegate.swift */,
 				D18F92C425B746F900C1A63B /* SceneDelegate.swift */,
 				D18F92C625B746F900C1A63B /* ViewController.swift */,
-				D18F936C25B80B2900C1A63B /* SocialMemberShip.swift */,
-				D18F937125B80B4600C1A63B /* PinkoiMemberShip.swift */,
-				D18F937625B80B5800C1A63B /* EmailMemberShip.swift */,
-				D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */,
+				D18F938D25B8501300C1A63B /* Bindable.swift */,
+				D18F938525B84B2100C1A63B /* Membership */,
+				D18F938925B84FF800C1A63B /* Transmitter */,
 				D18F936825B80B1B00C1A63B /* User */,
 				D18F930F25B75C2E00C1A63B /* LoginManager */,
 				D18F933E25B76F9C00C1A63B /* CoordinatorFlowVC */,
@@ -214,6 +215,24 @@
 				D18F934C25B7DA3300C1A63B /* User.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		D18F938525B84B2100C1A63B /* Membership */ = {
+			isa = PBXGroup;
+			children = (
+				D18F936C25B80B2900C1A63B /* SocialMemberShip.swift */,
+				D18F937125B80B4600C1A63B /* PinkoiMemberShip.swift */,
+				D18F937625B80B5800C1A63B /* EmailMemberShip.swift */,
+			);
+			path = Membership;
+			sourceTree = "<group>";
+		};
+		D18F938925B84FF800C1A63B /* Transmitter */ = {
+			isa = PBXGroup;
+			children = (
+				D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */,
+			);
+			path = Transmitter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +375,7 @@
 				D18F92C725B746F900C1A63B /* ViewController.swift in Sources */,
 				D18F931425B75C9C00C1A63B /* InputUserNameViewController.swift in Sources */,
 				D18F937225B80B4600C1A63B /* PinkoiMemberShip.swift in Sources */,
+				D18F938E25B8501300C1A63B /* Bindable.swift in Sources */,
 				D18F935225B7DEF700C1A63B /* ProductViewController.swift in Sources */,
 				D18F933625B76D5600C1A63B /* VCIdLable.swift in Sources */,
 				D18F92C325B746F900C1A63B /* AppDelegate.swift in Sources */,

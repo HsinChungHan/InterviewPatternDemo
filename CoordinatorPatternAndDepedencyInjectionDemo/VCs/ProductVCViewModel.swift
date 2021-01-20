@@ -10,14 +10,27 @@ import Foundation
 class ProductVCViewModel {
     var user: User?
     
+    func setUser(user: User) {
+        self.user = user
+    }
+    
+    var bindableText = Bindable<String>()
+    
+    func test() {
+        bindableText.value = "QAAQ"
+    }
+    
     func checkUserLoginTypeToDecideFollowEvents() {
         guard let loginType = user?.loginType else {
             fatalError("User login type is nil!")
         }
-        
         if let responderNode = MembershipTransmitter.createChain() {
             responderNode.confirm(loginType: loginType) { (loginType) in
-                print("No one can handle \(loginType.rawValue) event!")
+                let text = "Welcome you use \(loginType.rawValue)!"
+                bindableText.value = text
+            } failure: { (loginType) in
+                let text = "No one can handle \(loginType.rawValue) event!"
+                bindableText.value = text
             }
         }
     }
