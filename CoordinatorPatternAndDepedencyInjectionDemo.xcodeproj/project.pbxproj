@@ -18,10 +18,13 @@
 		D18F92FB25B7491700C1A63B /* SocialLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F92FA25B7491700C1A63B /* SocialLoginManager.swift */; };
 		D18F930025B749F600C1A63B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F92FF25B749F600C1A63B /* LoginViewController.swift */; };
 		D18F930825B752AD00C1A63B /* MembershipLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F930725B752AD00C1A63B /* MembershipLoginManager.swift */; };
-		D18F931425B75C9C00C1A63B /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F931325B75C9C00C1A63B /* ProductViewController.swift */; };
+		D18F931425B75C9C00C1A63B /* InputUserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F931325B75C9C00C1A63B /* InputUserNameViewController.swift */; };
 		D18F931925B75F1D00C1A63B /* FlowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F931825B75F1D00C1A63B /* FlowViewController.swift */; };
-		D18F932325B7634300C1A63B /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F932225B7634300C1A63B /* CartViewController.swift */; };
+		D18F932325B7634300C1A63B /* InputUserAddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F932225B7634300C1A63B /* InputUserAddressViewController.swift */; };
 		D18F933625B76D5600C1A63B /* VCIdLable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F933525B76D5600C1A63B /* VCIdLable.swift */; };
+		D18F934D25B7DA3300C1A63B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F934C25B7DA3300C1A63B /* User.swift */; };
+		D18F935225B7DEF700C1A63B /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F935125B7DEF700C1A63B /* ProductViewController.swift */; };
+		D18F935725B7F95000C1A63B /* SwitchVCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F935625B7F95000C1A63B /* SwitchVCButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +62,13 @@
 		D18F92FA25B7491700C1A63B /* SocialLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginManager.swift; sourceTree = "<group>"; };
 		D18F92FF25B749F600C1A63B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		D18F930725B752AD00C1A63B /* MembershipLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MembershipLoginManager.swift; sourceTree = "<group>"; };
-		D18F931325B75C9C00C1A63B /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		D18F931325B75C9C00C1A63B /* InputUserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUserNameViewController.swift; sourceTree = "<group>"; };
 		D18F931825B75F1D00C1A63B /* FlowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowViewController.swift; sourceTree = "<group>"; };
-		D18F932225B7634300C1A63B /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		D18F932225B7634300C1A63B /* InputUserAddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputUserAddressViewController.swift; sourceTree = "<group>"; };
 		D18F933525B76D5600C1A63B /* VCIdLable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCIdLable.swift; sourceTree = "<group>"; };
+		D18F934C25B7DA3300C1A63B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D18F935125B7DEF700C1A63B /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
+		D18F935625B7F95000C1A63B /* SwitchVCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchVCButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,10 +122,11 @@
 				D18F92C225B746F900C1A63B /* AppDelegate.swift */,
 				D18F92C425B746F900C1A63B /* SceneDelegate.swift */,
 				D18F92C625B746F900C1A63B /* ViewController.swift */,
+				D18F934C25B7DA3300C1A63B /* User.swift */,
 				D18F930F25B75C2E00C1A63B /* LoginManager */,
 				D18F933E25B76F9C00C1A63B /* CoordinatorFlowVC */,
-				D18F933A25B76F9400C1A63B /* Utilities */,
 				D18F933F25B76FA900C1A63B /* VCs */,
+				D18F933A25B76F9400C1A63B /* Utilities */,
 				D18F92C825B746F900C1A63B /* Main.storyboard */,
 				D18F92CB25B746FC00C1A63B /* Assets.xcassets */,
 				D18F92CD25B746FC00C1A63B /* LaunchScreen.storyboard */,
@@ -159,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				D18F933525B76D5600C1A63B /* VCIdLable.swift */,
+				D18F935625B7F95000C1A63B /* SwitchVCButton.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -174,9 +182,10 @@
 		D18F933F25B76FA900C1A63B /* VCs */ = {
 			isa = PBXGroup;
 			children = (
+				D18F931325B75C9C00C1A63B /* InputUserNameViewController.swift */,
+				D18F932225B7634300C1A63B /* InputUserAddressViewController.swift */,
 				D18F92FF25B749F600C1A63B /* LoginViewController.swift */,
-				D18F931325B75C9C00C1A63B /* ProductViewController.swift */,
-				D18F932225B7634300C1A63B /* CartViewController.swift */,
+				D18F935125B7DEF700C1A63B /* ProductViewController.swift */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -313,14 +322,17 @@
 			files = (
 				D18F930025B749F600C1A63B /* LoginViewController.swift in Sources */,
 				D18F92FB25B7491700C1A63B /* SocialLoginManager.swift in Sources */,
-				D18F932325B7634300C1A63B /* CartViewController.swift in Sources */,
+				D18F935725B7F95000C1A63B /* SwitchVCButton.swift in Sources */,
+				D18F932325B7634300C1A63B /* InputUserAddressViewController.swift in Sources */,
 				D18F931925B75F1D00C1A63B /* FlowViewController.swift in Sources */,
 				D18F92C725B746F900C1A63B /* ViewController.swift in Sources */,
-				D18F931425B75C9C00C1A63B /* ProductViewController.swift in Sources */,
+				D18F931425B75C9C00C1A63B /* InputUserNameViewController.swift in Sources */,
+				D18F935225B7DEF700C1A63B /* ProductViewController.swift in Sources */,
 				D18F933625B76D5600C1A63B /* VCIdLable.swift in Sources */,
 				D18F92C325B746F900C1A63B /* AppDelegate.swift in Sources */,
 				D18F930825B752AD00C1A63B /* MembershipLoginManager.swift in Sources */,
 				D18F92C525B746F900C1A63B /* SceneDelegate.swift in Sources */,
+				D18F934D25B7DA3300C1A63B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

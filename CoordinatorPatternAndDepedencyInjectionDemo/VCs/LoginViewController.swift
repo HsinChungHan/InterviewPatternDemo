@@ -7,11 +7,13 @@
 
 import UIKit
 
-enum LoginType {
-    case FacebookLogin
-    case TwitterLogin
-    case PinkoiLogin
-    case EmailLogin
+enum LoginType: String {
+    case FacebookLogin = "Facebook"
+    case TwitterLogin = "Twitter"
+    case PinkoiLogin = "Pinkoi"
+    case EmailLogin = "Email"
+    
+    
 }
 
 // MARK: - Depenancy Injection Demo
@@ -45,7 +47,7 @@ class LoginViewController: UIViewController {
 
         socialLoginDelegate?.loginViewControllerDoLogIn(self, loginType: .TwitterLogin)
         socialLoginDataSource?.loginViewControllerGetUserInformation(self, handle: { (userInfomation) in
-            print("userInfomation: \(userInfomation)")
+//            print("userInfomation: \(userInfomation)")
         })
         
         
@@ -55,7 +57,7 @@ class LoginViewController: UIViewController {
         
         membershipLoginDelegate?.loginViewControllerDoLogIn(self, loginType: .EmailLogin)
         membershipLoginDataSource?.loginViewControllerGetUserInformation(self, handle: { (userInfomation) in
-            print("userInfomation: \(userInfomation)")
+//            print("userInfomation: \(userInfomation)")
         })
         
     }
@@ -70,11 +72,14 @@ class LoginViewController: UIViewController {
         let label = VCIdLabel()
         label.setLabel(name: "LoginVC", frame: CGRect(x: 200, y: 200, width: 100, height: 20))
         view.addSubview(label)
+        
+        let goToButton = SwitchVCButton()
+        goToButton.setButton(destVCName: "ProductVC", frame: CGRect(x: 50, y: 250, width: 300, height: 20))
+        goToButton.addTarget(self, action: #selector(goToButtonPressed), for: .touchUpInside)
+        view.addSubview(goToButton)
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        // flow to product page
+
+    @objc func goToButtonPressed(sender: SwitchVCButton) {
         flowDelegate?.loginViewControllerFlowDelegateGoToProductVC(self, loginType: .EmailLogin)
     }
 }
