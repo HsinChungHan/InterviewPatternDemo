@@ -50,7 +50,9 @@ extension FlowViewController: LoginViewControllerFlowDelegate {
     func loginViewControllerFlowDelegateGoToProductVC(_ loginViewController: LoginViewController, loginType: LoginType) {
         let productVC = ProductViewController()
         user.loginType = loginType
-        productVC.user = user
+        let viewModel = ProductVCViewModel()
+        productVC.viewModel = viewModel
+        viewModel.user = user
         loginViewController.present(productVC, animated: true)
         productVC.flowDelegate = self
     }

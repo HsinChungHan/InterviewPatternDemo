@@ -15,7 +15,7 @@ protocol ProductViewControllerFlowDelegate: NSObject {
 class ProductViewController: UIViewController {
     
     weak var flowDelegate: ProductViewControllerFlowDelegate?
-    var user: User?
+    var viewModel: ProductVCViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +23,6 @@ class ProductViewController: UIViewController {
         let label = VCIdLabel()
         label.setLabel(name: "ProductVC", frame: CGRect(x: 200, y: 200, width: 100, height: 20))
         view.addSubview(label)
-        print(user?.description())
         
         let goToButton = SwitchVCButton()
         goToButton.setButton(destVCName: "Last Page", frame: CGRect(x: 50, y: 250, width: 300, height: 20))
@@ -34,6 +33,8 @@ class ProductViewController: UIViewController {
         goToRootButton.setButton(destVCName: "Root Page", frame: CGRect(x: 50, y: 300, width: 300, height: 20))
         goToRootButton.addTarget(self, action: #selector(goToRootButtonPressed), for: .touchUpInside)
         view.addSubview(goToRootButton)
+        
+        viewModel?.checkUserLoginTypeToDecideFollowEvents()
     }
 
     @objc func goToButtonPressed(sender: SwitchVCButton) {

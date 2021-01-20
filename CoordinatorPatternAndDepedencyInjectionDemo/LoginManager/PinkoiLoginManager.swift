@@ -1,5 +1,5 @@
 //
-//  LoginManager.swift
+//  PinkoiLoginManager.swift
 //  CoordinatorPatternAndDepedencyInjectionDemo
 //
 //  Created by Chung Han Hsin on 2021/1/20.
@@ -7,17 +7,13 @@
 
 import Foundation
 
-class SocialLoginManager: NSObject {
-    static let shared = SocialLoginManager()
+class PinkoiLoginManager: NSObject {
+    static let shared = PinkoiLoginManager()
     
     var mockUserInformation: String? = nil
     
-    func doFacebookLogin() {
-        mockUserInformation = "Hsin, age is 18, Facebook"
-    }
-    
-    func doTwitterLogin() {
-        mockUserInformation = "Hsin, age is 18, Twitter"
+    func doPinkoiLogin() {
+        mockUserInformation = "Hsin, age is 18, pinkoi"
     }
     
     func getUserInfomationFromServer() -> String {
@@ -27,15 +23,15 @@ class SocialLoginManager: NSObject {
     }
     
     fileprivate func getUserInfomation(handle: (String?) -> Bool) -> String {
-        var result = ""
+        var userInfomation = ""
         if handle(mockUserInformation) {
-            result = mockUserInformation!
+            userInfomation = mockUserInformation!
         }
-        return result
+        return userInfomation
     }
 }
 
-extension SocialLoginManager: LoginViewControllerDataSource {
+extension PinkoiLoginManager: LoginViewControllerDataSource {
     
     func loginViewControllerGetUserInformation(_ loginViewController: LoginViewController, handle: (String) -> Void) {
         let userInformation = getUserInfomationFromServer()
@@ -43,14 +39,12 @@ extension SocialLoginManager: LoginViewControllerDataSource {
     }
 }
 
-extension SocialLoginManager: LoginViewControllerDelegate {
+extension PinkoiLoginManager: LoginViewControllerDelegate {
     
     func loginViewControllerDoLogIn(_ loginViewController: LoginViewController, loginType: LoginType) {
         switch loginType {
-        case .FacebookLogin:
-            doFacebookLogin()
-        case .TwitterLogin:
-            doTwitterLogin()
+        case .PinkoiLogin:
+            doPinkoiLogin()
         default:
             break
         }

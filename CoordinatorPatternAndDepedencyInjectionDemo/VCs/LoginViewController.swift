@@ -12,6 +12,7 @@ enum LoginType: String {
     case TwitterLogin = "Twitter"
     case PinkoiLogin = "Pinkoi"
     case EmailLogin = "Email"
+    case Dummy = "Dummy"
 }
 
 // MARK: - Depenancy Injection Demo
@@ -78,6 +79,6 @@ class LoginViewController: UIViewController {
     }
 
     @objc func goToButtonPressed(sender: SwitchVCButton) {
-        flowDelegate?.loginViewControllerFlowDelegateGoToProductVC(self, loginType: .EmailLogin)
+        flowDelegate?.loginViewControllerFlowDelegateGoToProductVC(self, loginType: .Dummy)
     }
 }

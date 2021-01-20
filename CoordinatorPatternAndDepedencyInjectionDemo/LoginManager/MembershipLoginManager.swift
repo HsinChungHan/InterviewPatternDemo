@@ -23,11 +23,11 @@ class MembershipLoginManager: NSObject {
     }
     
     fileprivate func getUserInfomation(handle: (String?) -> Bool) -> String {
-        var result = ""
+        var userInfomation = ""
         if handle(mockUserInformation) {
-            result = mockUserInformation!
+            userInfomation = mockUserInformation!
         }
-        return result
+        return userInfomation
     }
 }
 

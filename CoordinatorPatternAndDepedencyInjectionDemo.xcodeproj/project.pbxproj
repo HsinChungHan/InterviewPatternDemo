@@ -25,6 +25,12 @@
 		D18F934D25B7DA3300C1A63B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F934C25B7DA3300C1A63B /* User.swift */; };
 		D18F935225B7DEF700C1A63B /* ProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F935125B7DEF700C1A63B /* ProductViewController.swift */; };
 		D18F935725B7F95000C1A63B /* SwitchVCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F935625B7F95000C1A63B /* SwitchVCButton.swift */; };
+		D18F936425B80A8700C1A63B /* PinkoiLoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F936325B80A8700C1A63B /* PinkoiLoginManager.swift */; };
+		D18F936D25B80B2900C1A63B /* SocialMemberShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F936C25B80B2900C1A63B /* SocialMemberShip.swift */; };
+		D18F937225B80B4600C1A63B /* PinkoiMemberShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F937125B80B4600C1A63B /* PinkoiMemberShip.swift */; };
+		D18F937725B80B5800C1A63B /* EmailMemberShip.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F937625B80B5800C1A63B /* EmailMemberShip.swift */; };
+		D18F937C25B80CAD00C1A63B /* MemebershipTransmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */; };
+		D18F938125B80F8B00C1A63B /* ProductVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F938025B80F8B00C1A63B /* ProductVCViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +75,12 @@
 		D18F934C25B7DA3300C1A63B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D18F935125B7DEF700C1A63B /* ProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewController.swift; sourceTree = "<group>"; };
 		D18F935625B7F95000C1A63B /* SwitchVCButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchVCButton.swift; sourceTree = "<group>"; };
+		D18F936325B80A8700C1A63B /* PinkoiLoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkoiLoginManager.swift; sourceTree = "<group>"; };
+		D18F936C25B80B2900C1A63B /* SocialMemberShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialMemberShip.swift; sourceTree = "<group>"; };
+		D18F937125B80B4600C1A63B /* PinkoiMemberShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinkoiMemberShip.swift; sourceTree = "<group>"; };
+		D18F937625B80B5800C1A63B /* EmailMemberShip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailMemberShip.swift; sourceTree = "<group>"; };
+		D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemebershipTransmitter.swift; sourceTree = "<group>"; };
+		D18F938025B80F8B00C1A63B /* ProductVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVCViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +134,11 @@
 				D18F92C225B746F900C1A63B /* AppDelegate.swift */,
 				D18F92C425B746F900C1A63B /* SceneDelegate.swift */,
 				D18F92C625B746F900C1A63B /* ViewController.swift */,
-				D18F934C25B7DA3300C1A63B /* User.swift */,
+				D18F936C25B80B2900C1A63B /* SocialMemberShip.swift */,
+				D18F937125B80B4600C1A63B /* PinkoiMemberShip.swift */,
+				D18F937625B80B5800C1A63B /* EmailMemberShip.swift */,
+				D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */,
+				D18F936825B80B1B00C1A63B /* User */,
 				D18F930F25B75C2E00C1A63B /* LoginManager */,
 				D18F933E25B76F9C00C1A63B /* CoordinatorFlowVC */,
 				D18F933F25B76FA900C1A63B /* VCs */,
@@ -158,6 +174,7 @@
 			children = (
 				D18F92FA25B7491700C1A63B /* SocialLoginManager.swift */,
 				D18F930725B752AD00C1A63B /* MembershipLoginManager.swift */,
+				D18F936325B80A8700C1A63B /* PinkoiLoginManager.swift */,
 			);
 			path = LoginManager;
 			sourceTree = "<group>";
@@ -186,8 +203,17 @@
 				D18F932225B7634300C1A63B /* InputUserAddressViewController.swift */,
 				D18F92FF25B749F600C1A63B /* LoginViewController.swift */,
 				D18F935125B7DEF700C1A63B /* ProductViewController.swift */,
+				D18F938025B80F8B00C1A63B /* ProductVCViewModel.swift */,
 			);
 			path = VCs;
+			sourceTree = "<group>";
+		};
+		D18F936825B80B1B00C1A63B /* User */ = {
+			isa = PBXGroup;
+			children = (
+				D18F934C25B7DA3300C1A63B /* User.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,13 +351,19 @@
 				D18F935725B7F95000C1A63B /* SwitchVCButton.swift in Sources */,
 				D18F932325B7634300C1A63B /* InputUserAddressViewController.swift in Sources */,
 				D18F931925B75F1D00C1A63B /* FlowViewController.swift in Sources */,
+				D18F937C25B80CAD00C1A63B /* MemebershipTransmitter.swift in Sources */,
+				D18F938125B80F8B00C1A63B /* ProductVCViewModel.swift in Sources */,
 				D18F92C725B746F900C1A63B /* ViewController.swift in Sources */,
 				D18F931425B75C9C00C1A63B /* InputUserNameViewController.swift in Sources */,
+				D18F937225B80B4600C1A63B /* PinkoiMemberShip.swift in Sources */,
 				D18F935225B7DEF700C1A63B /* ProductViewController.swift in Sources */,
 				D18F933625B76D5600C1A63B /* VCIdLable.swift in Sources */,
 				D18F92C325B746F900C1A63B /* AppDelegate.swift in Sources */,
+				D18F937725B80B5800C1A63B /* EmailMemberShip.swift in Sources */,
 				D18F930825B752AD00C1A63B /* MembershipLoginManager.swift in Sources */,
+				D18F936425B80A8700C1A63B /* PinkoiLoginManager.swift in Sources */,
 				D18F92C525B746F900C1A63B /* SceneDelegate.swift in Sources */,
+				D18F936D25B80B2900C1A63B /* SocialMemberShip.swift in Sources */,
 				D18F934D25B7DA3300C1A63B /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
