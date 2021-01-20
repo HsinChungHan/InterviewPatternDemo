@@ -52,5 +52,32 @@ extension FlowViewController: LoginViewControllerFlowDelegate {
         user.loginType = loginType
         productVC.user = user
         loginViewController.present(productVC, animated: true)
+        productVC.flowDelegate = self
+    }
+}
+
+extension FlowViewController: ProductViewControllerFlowDelegate {
+    func productViewControllerFlowDelegateGoToRootPage(_ productViewController: ProductViewController) {
+        let presentedVCs = findPresentedVCs()
+        for vc in presentedVCs {
+            vc.dismiss(animated: true)
+        }
+    }
+    
+    func findPresentedVCs() -> [UIViewController] {
+        var vcs = [UIViewController]()
+        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+
+        if var topController = keyWindow?.rootViewController {
+            while let presentedViewController = topController.presentedViewController {
+                topController = presentedViewController
+                vcs.append(topController)
+            }
+        }
+        return vcs
+    }
+    
+    func productViewControllerFlowDelegateGoBack(_ productViewController: ProductViewController) {
+        productViewController.dismiss(animated: true)
     }
 }

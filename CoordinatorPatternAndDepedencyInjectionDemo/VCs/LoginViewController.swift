@@ -12,8 +12,6 @@ enum LoginType: String {
     case TwitterLogin = "Twitter"
     case PinkoiLogin = "Pinkoi"
     case EmailLogin = "Email"
-    
-    
 }
 
 // MARK: - Depenancy Injection Demo
