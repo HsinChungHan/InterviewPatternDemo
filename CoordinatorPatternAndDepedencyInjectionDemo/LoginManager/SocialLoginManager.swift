@@ -8,6 +8,7 @@
 import Foundation
 
 class SocialLoginManager: NSObject {
+    
     static let shared = SocialLoginManager()
     
     var mockUserInformation: String? = nil
@@ -27,13 +28,14 @@ class SocialLoginManager: NSObject {
     }
     
     fileprivate func getUserInfomation(handle: (String?) -> Bool) -> String {
-        var result = ""
+        var userInfomation = ""
         if handle(mockUserInformation) {
-            result = mockUserInformation!
+            userInfomation = mockUserInformation!
         }
-        return result
+        return userInfomation
     }
 }
+
 
 extension SocialLoginManager: LoginViewControllerDataSource {
     
@@ -42,6 +44,7 @@ extension SocialLoginManager: LoginViewControllerDataSource {
         handle(userInformation)
     }
 }
+
 
 extension SocialLoginManager: LoginViewControllerDelegate {
     

@@ -7,19 +7,24 @@
 
 import Foundation
 class Bindable<T> {
-    var value: T? {
+    
+    private var value: T? {
         didSet {
             observer?(value)
         }
     }
     
-    var observer: ((_ value: T?) -> Void)?
+    private var observer: ((_ value: T?) -> Void)?
     
-//    init(value: T?) {
-//        self.value = value
-//    }
+    init(value: T?) {
+        self.value = value
+    }
     
     func bind(observer: @escaping(_ value: T?) -> Void) {
         self.observer = observer
+    }
+    
+    func setValue(value: T?) {
+        self.value = value
     }
 }

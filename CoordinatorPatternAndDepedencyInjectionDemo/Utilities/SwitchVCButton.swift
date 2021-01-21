@@ -21,6 +21,6 @@ extension BasicButton where Self: UIButton {
 }
 
 class SwitchVCButton: UIButton, BasicButton {
-    var bgColor: UIColor = UIColor.black
+    var bgColor: UIColor = UIColor.red
     var myTextColor: UIColor = UIColor.white
 }

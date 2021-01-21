@@ -8,6 +8,7 @@
 import Foundation
 
 class PinkoiLoginManager: NSObject {
+    
     static let shared = PinkoiLoginManager()
     
     var mockUserInformation: String? = nil

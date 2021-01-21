@@ -14,11 +14,7 @@ class ProductVCViewModel {
         self.user = user
     }
     
-    var bindableText = Bindable<String>()
-    
-    func test() {
-        bindableText.value = "QAAQ"
-    }
+    var bindableText = Bindable<String>(value: nil)
     
     func checkUserLoginTypeToDecideFollowEvents() {
         guard let loginType = user?.loginType else {
@@ -27,11 +23,13 @@ class ProductVCViewModel {
         if let responderNode = MembershipTransmitter.createChain() {
             responderNode.confirm(loginType: loginType) { (loginType) in
                 let text = "Welcome you use \(loginType.rawValue)!"
-                bindableText.value = text
+                bindableText.setValue(value: text)
             } failure: { (loginType) in
                 let text = "No one can handle \(loginType.rawValue) event!"
-                bindableText.value = text
+                bindableText.setValue(value: text)
             }
         }
     }
 }
+
+

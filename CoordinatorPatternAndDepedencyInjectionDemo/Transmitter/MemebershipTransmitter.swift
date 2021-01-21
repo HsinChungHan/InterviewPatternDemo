@@ -6,7 +6,9 @@
 //
 
 import Foundation
+
 class MembershipTransmitter {
+    
     var nextTransmitter: MembershipTransmitter?
     
     required init() {}

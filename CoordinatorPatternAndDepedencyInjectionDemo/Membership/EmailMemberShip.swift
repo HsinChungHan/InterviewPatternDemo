@@ -7,6 +7,7 @@
 
 import Foundation
 class EmailMembership: MembershipTransmitter {
+    
     override func confirm(loginType: LoginType, success: ((LoginType) -> Void), failure: ((LoginType) -> Void)) {
         if loginType == .EmailLogin {
             //have specific event for members who use email login

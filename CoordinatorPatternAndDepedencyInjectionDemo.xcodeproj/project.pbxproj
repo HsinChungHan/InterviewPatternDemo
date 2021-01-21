@@ -32,6 +32,7 @@
 		D18F937C25B80CAD00C1A63B /* MemebershipTransmitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */; };
 		D18F938125B80F8B00C1A63B /* ProductVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F938025B80F8B00C1A63B /* ProductVCViewModel.swift */; };
 		D18F938E25B8501300C1A63B /* Bindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F938D25B8501300C1A63B /* Bindable.swift */; };
+		D18F93C525B9211700C1A63B /* FlowVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18F93C425B9211700C1A63B /* FlowVCViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemebershipTransmitter.swift; sourceTree = "<group>"; };
 		D18F938025B80F8B00C1A63B /* ProductVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductVCViewModel.swift; sourceTree = "<group>"; };
 		D18F938D25B8501300C1A63B /* Bindable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bindable.swift; sourceTree = "<group>"; };
+		D18F93C425B9211700C1A63B /* FlowVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowVCViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,7 +138,7 @@
 				D18F92C225B746F900C1A63B /* AppDelegate.swift */,
 				D18F92C425B746F900C1A63B /* SceneDelegate.swift */,
 				D18F92C625B746F900C1A63B /* ViewController.swift */,
-				D18F938D25B8501300C1A63B /* Bindable.swift */,
+				D18F939225B87D8300C1A63B /* Bindable */,
 				D18F938525B84B2100C1A63B /* Membership */,
 				D18F938925B84FF800C1A63B /* Transmitter */,
 				D18F936825B80B1B00C1A63B /* User */,
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				D18F931825B75F1D00C1A63B /* FlowViewController.swift */,
+				D18F93C425B9211700C1A63B /* FlowVCViewModel.swift */,
 			);
 			path = CoordinatorFlowVC;
 			sourceTree = "<group>";
@@ -200,11 +203,10 @@
 		D18F933F25B76FA900C1A63B /* VCs */ = {
 			isa = PBXGroup;
 			children = (
-				D18F931325B75C9C00C1A63B /* InputUserNameViewController.swift */,
-				D18F932225B7634300C1A63B /* InputUserAddressViewController.swift */,
-				D18F92FF25B749F600C1A63B /* LoginViewController.swift */,
-				D18F935125B7DEF700C1A63B /* ProductViewController.swift */,
-				D18F938025B80F8B00C1A63B /* ProductVCViewModel.swift */,
+				D18F93B225B9005500C1A63B /* InputUserNameVC */,
+				D18F93AE25B9004A00C1A63B /* InputAddressVC */,
+				D18F93AA25B9004100C1A63B /* LoginVC */,
+				D18F93A625B9003700C1A63B /* ProductVC */,
 			);
 			path = VCs;
 			sourceTree = "<group>";
@@ -233,6 +235,47 @@
 				D18F937B25B80CAD00C1A63B /* MemebershipTransmitter.swift */,
 			);
 			path = Transmitter;
+			sourceTree = "<group>";
+		};
+		D18F939225B87D8300C1A63B /* Bindable */ = {
+			isa = PBXGroup;
+			children = (
+				D18F938D25B8501300C1A63B /* Bindable.swift */,
+			);
+			path = Bindable;
+			sourceTree = "<group>";
+		};
+		D18F93A625B9003700C1A63B /* ProductVC */ = {
+			isa = PBXGroup;
+			children = (
+				D18F935125B7DEF700C1A63B /* ProductViewController.swift */,
+				D18F938025B80F8B00C1A63B /* ProductVCViewModel.swift */,
+			);
+			path = ProductVC;
+			sourceTree = "<group>";
+		};
+		D18F93AA25B9004100C1A63B /* LoginVC */ = {
+			isa = PBXGroup;
+			children = (
+				D18F92FF25B749F600C1A63B /* LoginViewController.swift */,
+			);
+			path = LoginVC;
+			sourceTree = "<group>";
+		};
+		D18F93AE25B9004A00C1A63B /* InputAddressVC */ = {
+			isa = PBXGroup;
+			children = (
+				D18F932225B7634300C1A63B /* InputUserAddressViewController.swift */,
+			);
+			path = InputAddressVC;
+			sourceTree = "<group>";
+		};
+		D18F93B225B9005500C1A63B /* InputUserNameVC */ = {
+			isa = PBXGroup;
+			children = (
+				D18F931325B75C9C00C1A63B /* InputUserNameViewController.swift */,
+			);
+			path = InputUserNameVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -365,6 +408,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D18F93C525B9211700C1A63B /* FlowVCViewModel.swift in Sources */,
 				D18F930025B749F600C1A63B /* LoginViewController.swift in Sources */,
 				D18F92FB25B7491700C1A63B /* SocialLoginManager.swift in Sources */,
 				D18F935725B7F95000C1A63B /* SwitchVCButton.swift in Sources */,

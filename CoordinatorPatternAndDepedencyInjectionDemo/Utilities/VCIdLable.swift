@@ -10,7 +10,8 @@ import UIKit
 
 protocol BasicLabel {
     var bgColor: UIColor { get }
-    var myTextColor: UIColor { get }
+    var txtColor: UIColor { get }
+    var txtAlignment: NSTextAlignment { get }
 }
 
 extension BasicLabel where Self: UILabel {
@@ -18,11 +19,13 @@ extension BasicLabel where Self: UILabel {
         backgroundColor = bgColor
         self.frame = frame
         text = name
-        textColor = myTextColor
+        textColor = txtColor
+        textAlignment = txtAlignment
     }
 }
 
 class VCIdLabel: UILabel, BasicLabel {
-    var myTextColor: UIColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
-    let bgColor: UIColor = #colorLiteral(red: 0.3098039329, green: 0.01568627544, blue: 0.1294117719, alpha: 1)
+    let txtAlignment: NSTextAlignment = .center
+    var txtColor: UIColor = .black
+    var bgColor: UIColor = .lightGray
 }

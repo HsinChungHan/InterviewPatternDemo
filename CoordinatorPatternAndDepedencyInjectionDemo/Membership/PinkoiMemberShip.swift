@@ -6,7 +6,9 @@
 //
 
 import Foundation
+
 class PinkoiMembership: MembershipTransmitter {
+    
     override func confirm(loginType: LoginType, success: ((LoginType) -> Void), failure: ((LoginType) -> Void)) {
         if loginType == .PinkoiLogin {
             //have specific event for members who use pinkoi login

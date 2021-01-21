@@ -8,6 +8,7 @@
 import Foundation
 
 class SocailMembership: MembershipTransmitter {
+    
     override func confirm(loginType: LoginType, success: ((LoginType) -> Void), failure: ((LoginType) -> Void)) {
         if loginType == .FacebookLogin || loginType == .TwitterLogin {
             //have specific event for members who use social login

@@ -8,6 +8,7 @@
 import Foundation
 
 class MembershipLoginManager: NSObject {
+    
     static let shared = MembershipLoginManager()
     
     var mockUserInformation: String? = nil
@@ -31,6 +32,7 @@ class MembershipLoginManager: NSObject {
     }
 }
 
+
 extension MembershipLoginManager: LoginViewControllerDataSource {
     
     func loginViewControllerGetUserInformation(_ loginViewController: LoginViewController, handle: (String) -> Void) {
@@ -38,6 +40,7 @@ extension MembershipLoginManager: LoginViewControllerDataSource {
         handle(userInformation)
     }
 }
+
 
 extension MembershipLoginManager: LoginViewControllerDelegate {
     
